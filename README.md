@@ -5,20 +5,20 @@
 ## Build
 
 ```powershell
-dotnet build D:\_Code_Here\Git\MaxTools\easy_max_weight_normal\EasyMaxWeightedNormal.csproj -c Release
+dotnet build ./EasyMaxWeightedNormal.csproj -c Release
 ```
 
 The project targets .NET Framework 4.8 and references:
 
-- `D:\Program Files\Autodesk\3ds Max 2022\Autodesk.Max.dll`
-- `D:\Program Files\Autodesk\3ds Max 2022\AssemblyLoader.dll`
+- `C:\Program Files\Autodesk\3ds Max 2022\Autodesk.Max.dll`
+- `C:\Program Files\Autodesk\3ds Max 2022\AssemblyLoader.dll`
 
 ## Install For 3ds Max
 
 Copy the built `EasyMaxWeightedNormal.dll` to:
 
 ```text
-D:\Program Files\Autodesk\3ds Max 2022\bin\assemblies
+C:\Program Files\Autodesk\3ds Max 2022\bin\assemblies
 ```
 
 Restart 3ds Max. The assembly loader calls `AssemblyMain()`, which registers `Easy Weighted Normal` through `COREInterface13.AddClass(...)`.

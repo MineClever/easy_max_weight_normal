@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>EasyMaxWeightedNormal</AssemblyName>
+    <RootNamespace>EasyMaxWeightedNormal</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Autodesk.Max">
+      <HintPath>D:\Program Files\Autodesk\3ds Max 2022\Autodesk.Max.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="AssemblyLoader">
+      <HintPath>D:\Program Files\Autodesk\3ds Max 2022\AssemblyLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

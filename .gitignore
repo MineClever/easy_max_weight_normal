@@ -1,0 +1,176 @@
+# =========================
+# Build output
+# =========================
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Visual Studio cache
+*.VC.db
+*.VC.VC.opendb
+*.VC.opendb
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+
+# =========================
+# Rider / JetBrains
+# =========================
+.idea/
+*.sln.iml
+
+# =========================
+# .NET / NuGet
+# =========================
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+project.lock.json
+project.assets.json
+
+# Keep NuGet config if you use custom feeds
+#!NuGet.Config
+
+# =========================
+# Test / Coverage
+# =========================
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+.coverage/
+*.lcov
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+~$*
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# =========================
+# C# generated files
+# =========================
+*.g.cs
+*.g.i.cs
+*.generated.cs
+
+# 如果你希望提交自动生成代码，请删除上面三行
+
+# =========================
+# Publish / Deployment
+# =========================
+publish/
+Publish/
+app.publish/
+
+# =========================
+# 3ds Max plugin local deploy
+# =========================
+deploy/
+Deploy/
+dist/
+Dist/
+artifacts/
+Artifacts/
+
+# 3ds Max local copied plugin outputs
+*.dlm
+*.dlo
+*.dlu
+*.dle
+*.gup
+*.bmi
+
+# C# plugin binaries
+*.dll
+*.pdb
+*.mdb
+*.exe
+
+# 如果你的仓库需要提交第三方 DLL，请使用 ! 规则单独放行
+# 例如：
+# !lib/Autodesk.Max.dll
+# !lib/SomeDependency.dll
+
+# =========================
+# 3ds Max runtime / scene temp
+# =========================
+*.max.autobak
+*.mxs.autobak
+*.bak*
+*.fbx~
+*.max~
+*.tmp
+
+# =========================
+# Local tool settings
+# =========================
+*.local.json
+*.local.config
+appsettings.Development.json
+
+# =========================
+# ReSharper
+# =========================
+_ReSharper*/
+*.DotSettings.user
+
+# =========================
+# VS Code
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =========================
+# Keep source files
+# =========================
+!*.cs
+!*.csproj
+!*.sln
+!*.props
+!*.targets
+!*.config
+!*.json
+!*.xml
+!*.ms
+!*.mcr
+!*.mscript
+!README.md

@@ -9,7 +9,7 @@ namespace EasyMaxWeightedNormal
         public static void AssemblyMain()
         {
             var global = GlobalInterface.Instance;
-            descriptor = new EasyWeightedNormalClassDesc(global);
+            descriptor = new EasyWeightedNormalClassDesc();
             global.COREInterface13.AddClass(descriptor);
         }
 

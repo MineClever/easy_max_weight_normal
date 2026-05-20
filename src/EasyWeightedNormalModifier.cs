@@ -10,15 +10,17 @@ namespace EasyMaxWeightedNormal
         private readonly WeightedNormalSettings settings;
 
         public EasyWeightedNormalModifier()
-            : this(GlobalInterface.Instance)
         {
-        }
-
-        internal EasyWeightedNormalModifier(IGlobal global)
-        {
-            this.global = global;
+            this.global = GlobalInterface.Instance;
             settings = WeightedNormalSettings.Default;
         }
+        
+        internal EasyWeightedNormalModifier(WeightedNormalSettings settings)
+        {
+            this.global = GlobalInterface.Instance;
+            this.settings = settings;
+        }
+
 
         public override ICreateMouseCallBack CreateMouseCallBack
         {
@@ -73,7 +75,7 @@ namespace EasyMaxWeightedNormal
 
             try
             {
-                WeightedNormalProcessor.Apply(global, mesh, settings);
+                WeightedNormalProcessor.Apply(mesh, settings);
 
                 // Usually enough after changing explicit normals.
                 mesh.InvalidateGeomCache();

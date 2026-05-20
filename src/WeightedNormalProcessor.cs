@@ -8,8 +8,9 @@ namespace EasyMaxWeightedNormal
     {
         private const float Epsilon = 1.0e-8f;
 
-        public static void Apply(IGlobal global, IMesh mesh, WeightedNormalSettings settings)
+        public static void Apply(IMesh mesh, WeightedNormalSettings settings)
         {
+            var global = GlobalInterface.Instance;
             int faceCount = mesh.NumFaces;
             int cornerCount = faceCount * 3;
 

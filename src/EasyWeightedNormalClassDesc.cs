@@ -8,9 +8,9 @@ namespace EasyMaxWeightedNormal
         private readonly IGlobal global;
         private readonly IClass_ID classId;
 
-        public EasyWeightedNormalClassDesc(IGlobal global)
+        public EasyWeightedNormalClassDesc()
         {
-            this.global = global;
+            this.global = GlobalInterface.Instance;
             classId = PluginConstants.CreateClassId(global);
         }
 
@@ -51,7 +51,7 @@ namespace EasyMaxWeightedNormal
 
         public override object Create(bool loading)
         {
-            return new EasyWeightedNormalModifier(global);
+            return new EasyWeightedNormalModifier();
         }
     }
 }

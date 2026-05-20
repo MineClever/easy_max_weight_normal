@@ -8,6 +8,16 @@ namespace EasyMaxWeightedNormal
 
         public bool RespectSmoothingGroups { get; set; }
 
+        public WeightedNormalSettings Clone()
+        {
+            return new WeightedNormalSettings
+            {
+                UseAreaWeight = UseAreaWeight,
+                UseAngleWeight = UseAngleWeight,
+                RespectSmoothingGroups = RespectSmoothingGroups
+            };
+        }
+
         public static WeightedNormalSettings Default
         {
             get

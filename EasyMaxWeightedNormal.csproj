@@ -3,6 +3,7 @@
     <TargetFramework>net48</TargetFramework>
     <LangVersion>7.3</LangVersion>
     <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>EasyMaxWeightedNormal</AssemblyName>
     <RootNamespace>EasyMaxWeightedNormal</RootNamespace>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -18,6 +19,14 @@
     </Reference>
     <Reference Include="AssemblyLoader">
       <HintPath>D:\Program Files\Autodesk\3ds Max 2022\AssemblyLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ManagedServices">
+      <HintPath>D:\Program Files\Autodesk\3ds Max 2022\ManagedServices.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MaxCustomControls">
+      <HintPath>D:\Program Files\Autodesk\3ds Max 2022\MaxCustomControls.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

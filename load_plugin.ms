@@ -2,7 +2,7 @@
     local scriptPath = getSourceFileName()
     local scriptDir = getFilenamePath scriptPath
 
-    local dllPath = scriptDir + @"bin\Debug\EasyMaxWeightedNormal.dll"
+    local dllPath = scriptDir + @"bin\Release\EasyMaxWeightedNormal.dll"
 
     if doesFileExist dllPath then
     (

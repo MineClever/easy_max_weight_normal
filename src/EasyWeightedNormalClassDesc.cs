@@ -7,11 +7,13 @@ namespace EasyMaxWeightedNormal
     {
         private readonly IGlobal global;
         private readonly IClass_ID classId;
+        private readonly IParamBlockDesc2 paramBlockDesc;
 
         public EasyWeightedNormalClassDesc()
         {
             this.global = GlobalInterface.Instance;
             classId = PluginConstants.CreateClassId(global);
+            paramBlockDesc = WeightedNormalParamBlock.Create(global, this);
         }
 
         public override bool IsPublic
@@ -51,7 +53,12 @@ namespace EasyMaxWeightedNormal
 
         public override object Create(bool loading)
         {
-            return new EasyWeightedNormalModifier();
+            return new EasyWeightedNormalModifier(this);
+        }
+
+        internal IParamBlockDesc2 ParamBlockDesc
+        {
+            get { return paramBlockDesc; }
         }
     }
 }

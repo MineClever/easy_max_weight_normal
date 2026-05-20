@@ -15,7 +15,7 @@ namespace EasyMaxWeightedNormal
 
         public static IClass_ID CreateClassId(IGlobal global)
         {
-            return global.Class_ID.Create(0x74ad2e31u, 0x41bb0e52u);
+            return global.Class_ID.Create(0x74a82e31u, 0x51bb0e52u);
         }
     }
 }

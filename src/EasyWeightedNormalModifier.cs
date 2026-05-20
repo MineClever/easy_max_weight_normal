@@ -4,23 +4,14 @@ using Autodesk.Max.Plugins;
 
 namespace EasyMaxWeightedNormal
 {
-    public sealed class EasyWeightedNormalModifier : Modifier
+    public sealed class EasyWeightedNormalModifier : OSModifier
     {
         private readonly IGlobal global;
-        private readonly WeightedNormalSettings settings;
 
-        public EasyWeightedNormalModifier()
+        public EasyWeightedNormalModifier(EasyWeightedNormalClassDesc classDesc)
         {
             this.global = GlobalInterface.Instance;
-            settings = WeightedNormalSettings.Default;
         }
-        
-        internal EasyWeightedNormalModifier(WeightedNormalSettings settings)
-        {
-            this.global = GlobalInterface.Instance;
-            this.settings = settings;
-        }
-
 
         public override ICreateMouseCallBack CreateMouseCallBack
         {
@@ -75,7 +66,7 @@ namespace EasyMaxWeightedNormal
 
             try
             {
-                WeightedNormalProcessor.Apply(mesh, settings);
+                WeightedNormalProcessor.Apply(mesh, ReadSettings());
 
                 // Usually enough after changing explicit normals.
                 mesh.InvalidateGeomCache();
@@ -89,6 +80,23 @@ namespace EasyMaxWeightedNormal
             }
 
 
+        }
+
+        private WeightedNormalSettings ReadSettings()
+        {
+            IIParamBlock2 parameterBlock = GetParamBlock(WeightedNormalParamBlock.BlockId);
+            if (parameterBlock == null)
+            {
+                return WeightedNormalSettings.Default;
+            }
+
+            int time = global.COREInterface.Time;
+            return new WeightedNormalSettings
+            {
+                UseAreaWeight = parameterBlock.GetInt((short)WeightedNormalParamIds.UseAreaWeight, time, 0) != 0,
+                UseAngleWeight = parameterBlock.GetInt((short)WeightedNormalParamIds.UseAngleWeight, time, 0) != 0,
+                RespectSmoothingGroups = parameterBlock.GetInt((short)WeightedNormalParamIds.RespectSmoothingGroups, time, 0) != 0
+            };
         }
     }
 }

@@ -1,0 +1,1 @@
+dotnet build ./EasyMaxWeightedNormal.csproj -c Debug
